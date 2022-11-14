@@ -1,3 +1,8 @@
+import heroImg from "../assets/images/illustration-1.svg";
+import arrow from "../assets/images/icon-arrow.svg";
+import quote from "../assets/images/icon-quotes.svg";
+import aboutImg from "../assets/images/illustration-2.svg";
+
 function Page() {
   return (
     <div className="body">
@@ -25,7 +30,7 @@ function Page() {
             </form>
           </div>
           <div className="hero-img">
-            <img src="../images/illustration-1.svg" alt="" />
+            <img src={heroImg} alt="landing page graphics" />
           </div>
         </section>
         <section className="usage">
@@ -43,7 +48,7 @@ function Page() {
               </p>
               <div className="cta-see">
                 <span>See how Fylo works</span>
-                <img src="../images/icon-arrow.svg" alt="arrow svg" />
+                <img src={arrow} alt="arrow svg" />
               </div>
 
               <div className="card">
@@ -57,10 +62,7 @@ function Page() {
                 </p>
                 <div className="profile">
                   <div className="avatar">
-                    <img
-                      src="../images/avatar-testimonial.jpg"
-                      alt="profile picture"
-                    />
+                    <img src={quote} alt="profile picture" />
                   </div>
                   <div>
                     <h3 className="rale">Kyle Burton</h3>
@@ -70,7 +72,7 @@ function Page() {
               </div>
             </div>
             <div className="hero-img">
-              <img src="../images/illustration-2.svg" alt="" />
+              <img src={aboutImg} alt="about product graphics" />
             </div>
           </div>
         </section>

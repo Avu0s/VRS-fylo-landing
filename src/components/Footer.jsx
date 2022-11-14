@@ -1,22 +1,25 @@
+import phone from "../assets/images/icon-phone.svg";
+import email from "../assets/images/icon-email.svg";
+import logo from "../assets/images/wlogo.svg";
 function Footer() {
   return (
     <footer>
       <div className="wrapper">
         <div className="logo">
-          <img src="../images/wlogo.svg" alt="Fylo logo" />
+          <img src={logo} alt="Fylo logo" />
         </div>
 
         <div className="footer-items">
           <div className="contact">
             <div>
               <div className="icon">
-                <img src="../images/icon-phone.svg" alt="" />
+                <img src={phone} alt="phone icon" />
               </div>
               <span>Phone: +1-543-123-4567</span>
             </div>
             <div>
               <div className="icon">
-                <img src="../images/icon-email.svg" alt="" />
+                <img src={email} alt="email icon" />
               </div>
               <span>example@fylo.com</span>
             </div>

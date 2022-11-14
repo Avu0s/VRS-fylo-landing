@@ -1,9 +1,11 @@
+import logo from "../assets/images/logo.svg";
+
 function Header() {
   return (
     <header>
       <nav>
         <div className="logo">
-          <img src="../images/logo.svg" alt="Fylo logo" />
+          <img src={logo} alt="Fylo logo" />
         </div>
         <ul>
           <li>Features</li>
