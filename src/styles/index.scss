@@ -1,0 +1,342 @@
+@import "./helpers.scss";
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  list-style: none;
+}
+
+#root {
+  max-width: 1440px;
+  margin: 0 auto;
+  font-family: "Open Sans", sans-serif;
+}
+
+.body {
+  min-height: 100vh;
+  color: $Very-Dark-Blue;
+  font-family: "Open Sans", sans-serif;
+}
+
+header {
+  @include grid-pc();
+  padding: 1.5rem 0;
+  font-family: "Raleway", sans-serif;
+
+  nav {
+    width: 90%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    ul {
+      @include flx-gap-1();
+
+      li {
+        font-size: 0.75rem;
+        font-weight: bold;
+        cursor: pointer;
+      }
+    }
+  }
+}
+
+.logo {
+  @include grid-pc();
+  width: 5rem;
+  cursor: pointer;
+
+  img {
+    width: 100%;
+  }
+}
+
+.hero,
+.usage-cnt,
+.art-wrapper,
+.wrapper {
+  @include layout();
+}
+
+.hero-img {
+  width: 90%;
+  margin: 0 auto;
+
+  img {
+    width: 100%;
+  }
+}
+
+.hero-cnt {
+  @include flx-col();
+  gap: 2rem;
+  text-align: center;
+
+  p {
+    font-size: 0.9rem;
+    line-height: 1.25rem;
+  }
+}
+
+.rale {
+  font-family: "Raleway", sans-serif;
+}
+
+form {
+  @include flx-col();
+  gap: 1rem;
+  padding: 1rem 0;
+
+  div {
+    @include flx-col();
+    input {
+      border: solid 1px $Light-Gray;
+    }
+
+    input:focus {
+      outline: solid 1px $Desaturated-Blue;
+    }
+  }
+  input,
+  button {
+    padding: 0.75rem 1rem;
+    border-radius: $subtle-border;
+  }
+}
+
+button {
+  border: none;
+  background: $Bright-Blue;
+  color: $Light-Grayish-Blue;
+  font-size: 0.8rem;
+  font-family: "Raleway", sans-serif;
+  cursor: pointer;
+  font-weight: bold;
+  transition: all 0.2s ease-in-out;
+}
+
+button:focus,
+button:hover {
+  box-shadow: $box-shdw-btn;
+}
+
+.usage {
+  background: url(./images/bg-curve-mobile.svg);
+  background-size: cover;
+  background-repeat: repeat;
+  background-position: center;
+}
+
+.cta-see {
+  display: flex;
+  gap: 0.4rem;
+  border-bottom: solid 1px $Moderate-Cyan;
+  max-width: fit-content;
+  padding: 0.5rem 0;
+  color: $Moderate-Cyan;
+  align-self: center;
+  font-family: "Raleway", sans-serif;
+  cursor: pointer;
+
+  span {
+    font-size: 0.9rem;
+  }
+}
+
+.card {
+  @include flx-col();
+  width: 90%;
+  background: #fff;
+  gap: 0.8rem;
+  padding: 1.25rem 1.5rem;
+  align-self: center;
+  text-align: start;
+  box-shadow: $box-shdw;
+  border-radius: $subtle-border;
+
+  p {
+    font-size: 0.7rem;
+    line-height: 1.25rem;
+  }
+
+  .profile {
+    display: flex;
+    gap: 0.5rem;
+    align-items: center;
+    font-size: 0.65rem;
+  }
+
+  .avatar {
+    width: 2rem;
+
+    img {
+      width: inherit;
+      border-radius: 50%;
+    }
+  }
+}
+
+article {
+  background: $Desaturated-Blue;
+}
+
+.art-wrapper,
+.wrapper {
+  width: 80%;
+  color: $Light-Grayish-Blue;
+  @include flx-col-gap();
+}
+
+.art-wrapper form {
+  width: 90%;
+  margin: 0 auto;
+}
+
+footer {
+  background: $Very-Dark-Blue;
+
+  .wrapper {
+    @include flx-col();
+    gap: 2rem;
+
+    .logo {
+      width: 8rem;
+    }
+
+    .footer-items {
+      @include flx-col();
+      gap: 3rem;
+    }
+
+    ul,
+    .contact {
+      @include flx-col-gap();
+    }
+
+    .socials {
+      display: flex;
+      gap: 1.5rem;
+
+      a {
+        color: #fff;
+      }
+    }
+
+    .contact > div {
+      @include flx-gap-1();
+    }
+
+    li:hover,
+    .fa:hover {
+      color: $Desaturated-Blue;
+    }
+  }
+
+  small {
+    display: block;
+    text-align: center;
+    color: $Very-Dark-Blue;
+    padding: 2rem 0;
+    background: #fff;
+  }
+}
+@media (min-width: 575px) {
+  header {
+    padding: 2rem 0;
+
+    nav {
+      div {
+        width: 7rem;
+      }
+
+      ul {
+        gap: 1.5rem;
+
+        li {
+          font-size: 0.9rem;
+        }
+      }
+    }
+  }
+
+  .hero-cnt {
+    text-align: start;
+
+    h1 {
+      font-size: 2rem;
+    }
+
+    h2 {
+      font-size: 1.75rem;
+    }
+
+    p {
+      font-size: 1rem;
+      line-height: 1.5rem;
+    }
+  }
+
+  .bold {
+    font-weight: bold;
+  }
+
+  .hero,
+  .usage-cnt,
+  .art-wrapper {
+    @include grid-pc();
+    grid-template-columns: 1fr 1fr;
+    padding: 6rem 0;
+  }
+
+  .usage {
+    background: url(./images/bg-curve-desktop.svg);
+    background-size: cover;
+    background-repeat: repeat;
+    background-position: center;
+  }
+
+  .card {
+    align-self: flex-start;
+    max-width: 20rem;
+    p {
+      font-size: 0.8rem;
+    }
+  }
+
+  .art-wrapper,
+  .wrapper {
+    width: 90%;
+  }
+
+  .art-wrapper {
+    form {
+      @include flx-col();
+    }
+
+    p {
+      max-width: 90%;
+    }
+
+    button {
+      width: fit-content;
+    }
+  }
+
+  footer {
+    .wrapper {
+      .footer-items {
+        flex-direction: row;
+        justify-content: flex-start;
+        gap: 14vw;
+        flex-wrap: wrap;
+      }
+    }
+  }
+}
+@media (min-width: 876px) {
+  .hero-cnt > form {
+    display: grid;
+    grid-template-columns: 0.6fr 0.4fr;
+  }
+}
