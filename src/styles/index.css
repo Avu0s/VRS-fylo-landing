@@ -12,7 +12,6 @@
 }
 
 .body {
-  min-height: 100vh;
   color: hsl(243deg, 87%, 12%);
   font-family: "Open Sans", sans-serif;
 }
@@ -310,8 +309,7 @@ footer small {
   }
   footer .wrapper .footer-items {
     flex-direction: row;
-    justify-content: flex-start;
-    gap: 14vw;
+    justify-content: space-between;
     flex-wrap: wrap;
   }
 }

@@ -14,7 +14,6 @@
 }
 
 .body {
-  min-height: 100vh;
   color: $Very-Dark-Blue;
   font-family: "Open Sans", sans-serif;
 }
@@ -78,6 +77,7 @@ header {
     line-height: 1.25rem;
   }
 }
+
 .cta-see {
   display: flex;
   gap: 0.4rem;
@@ -126,6 +126,7 @@ header {
     }
   }
 }
+
 .rale {
   font-family: "Raleway", sans-serif;
 }
@@ -137,6 +138,7 @@ form {
 
   div {
     @include flx-col();
+
     input {
       border: solid 1px $Light-Gray;
     }
@@ -145,6 +147,7 @@ form {
       outline: solid 1px $Desaturated-Blue;
     }
   }
+
   input,
   button {
     padding: 0.75rem 1rem;
@@ -239,6 +242,7 @@ footer {
     background: #fff;
   }
 }
+
 @media (min-width: 575px) {
   header {
     padding: 2rem 0;
@@ -286,9 +290,11 @@ footer {
     grid-template-columns: 1fr 1fr;
     padding: 6rem 0;
   }
+
   .cta-see {
     align-self: flex-start;
   }
+
   .usage {
     background: url(../assets/images/bg-curve-desktop.svg);
     background-size: cover;
@@ -299,6 +305,7 @@ footer {
   .card {
     align-self: flex-start;
     max-width: 20rem;
+
     p {
       font-size: 0.8rem;
     }
@@ -327,18 +334,19 @@ footer {
     .wrapper {
       .footer-items {
         flex-direction: row;
-        justify-content: flex-start;
-        gap: 14vw;
+        justify-content: space-between;
         flex-wrap: wrap;
       }
     }
   }
 }
+
 @media (min-width: 876px) {
   .hero-cnt > form {
     display: grid;
     grid-template-columns: 0.6fr 0.4fr;
   }
+
   .cta-see {
     align-self: flex-start;
   }
