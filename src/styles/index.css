@@ -80,6 +80,53 @@ header nav ul li {
   line-height: 1.25rem;
 }
 
+.cta-see {
+  display: flex;
+  gap: 0.4rem;
+  border-bottom: solid 1px hsl(170deg, 45%, 43%);
+  max-width: -webkit-fit-content;
+  max-width: -moz-fit-content;
+  max-width: fit-content;
+  padding: 0.5rem 0;
+  color: hsl(170deg, 45%, 43%);
+  align-self: center;
+  font-family: "Raleway", sans-serif;
+  cursor: pointer;
+}
+.cta-see span {
+  font-size: 0.9rem;
+}
+
+.card {
+  display: flex;
+  flex-direction: column;
+  width: 90%;
+  background: #fff;
+  gap: 0.8rem;
+  padding: 1.25rem 1.5rem;
+  align-self: center;
+  text-align: start;
+  box-shadow: -2px 4px 12px 1px rgba(150, 150, 150, 0.212);
+  border-radius: 0.15rem;
+}
+.card p {
+  font-size: 0.7rem;
+  line-height: 1.25rem;
+}
+.card .profile {
+  display: flex;
+  gap: 0.75rem;
+  align-items: center;
+  font-size: 0.65rem;
+}
+.card .avatar {
+  width: 2rem;
+}
+.card .avatar img {
+  width: inherit;
+  border-radius: 50%;
+}
+
 .rale {
   font-family: "Raleway", sans-serif;
 }
@@ -127,53 +174,6 @@ button:hover {
   background-size: cover;
   background-repeat: repeat;
   background-position: center;
-}
-
-.cta-see {
-  display: flex;
-  gap: 0.4rem;
-  border-bottom: solid 1px hsl(170deg, 45%, 43%);
-  max-width: -webkit-fit-content;
-  max-width: -moz-fit-content;
-  max-width: fit-content;
-  padding: 0.5rem 0;
-  color: hsl(170deg, 45%, 43%);
-  align-self: center;
-  font-family: "Raleway", sans-serif;
-  cursor: pointer;
-}
-.cta-see span {
-  font-size: 0.9rem;
-}
-
-.card {
-  display: flex;
-  flex-direction: column;
-  width: 90%;
-  background: #fff;
-  gap: 0.8rem;
-  padding: 1.25rem 1.5rem;
-  align-self: center;
-  text-align: start;
-  box-shadow: -2px 4px 12px 1px rgba(150, 150, 150, 0.212);
-  border-radius: 0.15rem;
-}
-.card p {
-  font-size: 0.7rem;
-  line-height: 1.25rem;
-}
-.card .profile {
-  display: flex;
-  gap: 0.5rem;
-  align-items: center;
-  font-size: 0.65rem;
-}
-.card .avatar {
-  width: 2rem;
-}
-.card .avatar img {
-  width: inherit;
-  border-radius: 50%;
 }
 
 article {
@@ -276,6 +276,9 @@ footer small {
     grid-template-columns: 1fr 1fr;
     padding: 6rem 0;
   }
+  .cta-see {
+    align-self: flex-start;
+  }
   .usage {
     background: url(../assets/images/bg-curve-desktop.svg);
     background-size: cover;
@@ -316,5 +319,8 @@ footer small {
   .hero-cnt > form {
     display: grid;
     grid-template-columns: 0.6fr 0.4fr;
+  }
+  .cta-see {
+    align-self: flex-start;
   }
 }/*# sourceMappingURL=index.css.map */

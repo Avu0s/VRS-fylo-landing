@@ -38,7 +38,7 @@ function Footer() {
             <li>Privacy</li>
           </ul>
 
-          <div class="socials">
+          <div className="socials">
             <a href="#" className="fa fa-facebook"></a>
             <a href="#" className="fa fa-twitter"></a>
             <a href="#" className="fa fa-instagram"></a>

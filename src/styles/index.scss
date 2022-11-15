@@ -78,7 +78,54 @@ header {
     line-height: 1.25rem;
   }
 }
+.cta-see {
+  display: flex;
+  gap: 0.4rem;
+  border-bottom: solid 1px $Moderate-Cyan;
+  max-width: fit-content;
+  padding: 0.5rem 0;
+  color: $Moderate-Cyan;
+  align-self: center;
+  font-family: "Raleway", sans-serif;
+  cursor: pointer;
 
+  span {
+    font-size: 0.9rem;
+  }
+}
+
+.card {
+  @include flx-col();
+  width: 90%;
+  background: #fff;
+  gap: 0.8rem;
+  padding: 1.25rem 1.5rem;
+  align-self: center;
+  text-align: start;
+  box-shadow: $box-shdw;
+  border-radius: $subtle-border;
+
+  p {
+    font-size: 0.7rem;
+    line-height: 1.25rem;
+  }
+
+  .profile {
+    display: flex;
+    gap: 0.75rem;
+    align-items: center;
+    font-size: 0.65rem;
+  }
+
+  .avatar {
+    width: 2rem;
+
+    img {
+      width: inherit;
+      border-radius: 50%;
+    }
+  }
+}
 .rale {
   font-family: "Raleway", sans-serif;
 }
@@ -126,55 +173,6 @@ button:hover {
   background-size: cover;
   background-repeat: repeat;
   background-position: center;
-}
-
-.cta-see {
-  display: flex;
-  gap: 0.4rem;
-  border-bottom: solid 1px $Moderate-Cyan;
-  max-width: fit-content;
-  padding: 0.5rem 0;
-  color: $Moderate-Cyan;
-  align-self: center;
-  font-family: "Raleway", sans-serif;
-  cursor: pointer;
-
-  span {
-    font-size: 0.9rem;
-  }
-}
-
-.card {
-  @include flx-col();
-  width: 90%;
-  background: #fff;
-  gap: 0.8rem;
-  padding: 1.25rem 1.5rem;
-  align-self: center;
-  text-align: start;
-  box-shadow: $box-shdw;
-  border-radius: $subtle-border;
-
-  p {
-    font-size: 0.7rem;
-    line-height: 1.25rem;
-  }
-
-  .profile {
-    display: flex;
-    gap: 0.5rem;
-    align-items: center;
-    font-size: 0.65rem;
-  }
-
-  .avatar {
-    width: 2rem;
-
-    img {
-      width: inherit;
-      border-radius: 50%;
-    }
-  }
 }
 
 article {
@@ -288,7 +286,9 @@ footer {
     grid-template-columns: 1fr 1fr;
     padding: 6rem 0;
   }
-
+  .cta-see {
+    align-self: flex-start;
+  }
   .usage {
     background: url(../assets/images/bg-curve-desktop.svg);
     background-size: cover;
@@ -338,5 +338,8 @@ footer {
   .hero-cnt > form {
     display: grid;
     grid-template-columns: 0.6fr 0.4fr;
+  }
+  .cta-see {
+    align-self: flex-start;
   }
 }

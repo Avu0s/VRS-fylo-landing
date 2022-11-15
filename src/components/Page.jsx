@@ -2,6 +2,7 @@ import heroImg from "../assets/images/illustration-1.svg";
 import arrow from "../assets/images/icon-arrow.svg";
 import quote from "../assets/images/icon-quotes.svg";
 import aboutImg from "../assets/images/illustration-2.svg";
+import avatar from "../assets/images/avatar.jpg";
 
 function Page() {
   return (
@@ -12,7 +13,7 @@ function Page() {
             <h1 className="rale">
               All your files in one secure location, accessible anywhere.
             </h1>
-            <p class="bold">
+            <p className="bold">
               Fylo stores your most important files in one secure location.
               Access them wherever you need, share and collaborate with friends,
               family, and co-workers.
@@ -53,7 +54,7 @@ function Page() {
 
               <div className="card">
                 <div className="quote">
-                  <img src="../images/icon-quotes.svg" alt="" />
+                  <img src={quote} alt="quote icon" />
                 </div>
                 <p>
                   Fylo has improved our team productivity by an order of
@@ -62,7 +63,7 @@ function Page() {
                 </p>
                 <div className="profile">
                   <div className="avatar">
-                    <img src={quote} alt="profile picture" />
+                    <img src={avatar} alt="profile picture" />
                   </div>
                   <div>
                     <h3 className="rale">Kyle Burton</h3>
